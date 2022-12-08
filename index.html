@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Turing D'App</h1>
+        <span>Selecione o tipo de método do contrato:</span>
+        <div id="button_wrapper">
+            <button id="modalAlunoButton" type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalAluno">
+                Aluno
+            </button>
+            <button id="modalProfessorButton" type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalProfessor">
+                Professor
+            </button>
+        </div>
+        <div class="wrapper">
+            <h2>Visualizar informações</h2>
+            <div class="visualize-wrapper">
+                <form>
+                    <div class="form-group">
+                        <label for="selectUserVisualize">Usuario</label>
+                        <select id="selectUserVisualize" class="custom-select">
+                            <option value="Andre">Andre</option>
+                            <option value="Antonio">Antonio</option>
+                            <option value="Ratonilo">Ratonilo</option>
+                            <option value="eduardo">eduardo</option>
+                            <option value="Enzo">Enzo</option>
+                            <option value="Fernando">Fernando</option>
+                            <option value="Juliana">Juliana</option>
+                            <option value="Altoe">Altoe</option>
+                            <option value="Salgado">Salgado</option>
+                            <option value="Regata">Regata</option>
+                            <option value="Luis">Luis</option>
+                            <option value="Nicolas">Nicolas</option>
+                            <option value="Rauta">Rauta</option>
+                            <option value="Silva">Silva</option>
+                            <option value="Sophie">Sophie</option>
+                            <option value="Thiago">Thiago</option>
+                            <option value="Brito">Brito</option>
+                            <option value="ulopesu">ulopesu</option>
+                            <option value="Vinicius">Vinicius</option>
+                            <option value="Bonella">Bonella</option>
+                        </select>
+                        <small id="usuarioHelp" class="form-text text-muted">Selecione um dos usuários para visualizar.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="saTuringsValueVisualize">Saldo em Turings</label>
+                        <input type="number" class="form-control" id="saTuringsValueVisualize" disabled aria-describedby="emailHelp">
+                        <small id="numeroHelp" class="form-text text-muted">Pode demorar alguns segundos para atualizar</small>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="submitVisualizeButton" type="button" class="btn btn-dark" style="float:center">Checar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aluno -->
+    <div class="modal fade" id="modalAluno" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Vote</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="voteForm">
+                        <div class="form-group">
+                            <label for="selectUser">Usuario</label>
+                            <select id="selectUser" class="custom-select">
+                                <option value="Andre">Andre</option>
+                                <option value="Antonio">Antonio</option>
+                                <option value="Ratonilo">Ratonilo</option>
+                                <option value="eduardo">eduardo</option>
+                                <option value="Enzo">Enzo</option>
+                                <option value="Fernando">Fernando</option>
+                                <option value="Juliana">Juliana</option>
+                                <option value="Altoe">Altoe</option>
+                                <option value="Salgado">Salgado</option>
+                                <option value="Regata">Regata</option>
+                                <option value="Luis">Luis</option>
+                                <option value="Nicolas">Nicolas</option>
+                                <option value="Rauta">Rauta</option>
+                                <option value="Silva">Silva</option>
+                                <option value="Sophie">Sophie</option>
+                                <option value="Thiago">Thiago</option>
+                                <option value="Brito">Brito</option>
+                                <option value="ulopesu">ulopesu</option>
+                                <option value="Vinicius">Vinicius</option>
+                                <option value="Bonella">Bonella</option>
+                            </select>
+                            <small id="usuarioHelp" class="form-text text-muted">Selecione um dos usuários para votar.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="saTuringsValue">Valor</label>
+                            <input type="number" value=2 min=0 max=9 class="form-control" id="saTuringsValue" aria-describedby="emailHelp">
+                            <small id="numeroHelp" class="form-text text-muted">O valor sera submetido como Valor * Expoente</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="selectExpoent">Expoente 10^</label>
+                            <select id="selectExpoent">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                            </select>
+                            <small id="expoentHelp" class="form-text text-muted">2*10^18 equivale a 2 Turings e é o maior valor aceito.</small>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <button id="submitVoteForm" type="button" class="btn btn-dark" style="float:center">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  Professor-->
+    <div class="modal fade" id="modalProfessor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Issue Token</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="selectUserProfessor">Usuario</label>
+                        <select id="selectUserProfessor" class="custom-select">
+                            <option value="Andre">Andre</option>
+                            <option value="Antonio">Antonio</option>
+                            <option value="Ratonilo">Ratonilo</option>
+                            <option value="eduardo">eduardo</option>
+                            <option value="Enzo">Enzo</option>
+                            <option value="Fernando">Fernando</option>
+                            <option value="Juliana">Juliana</option>
+                            <option value="Altoe">Altoe</option>
+                            <option value="Salgado">Salgado</option>
+                            <option value="Regata">Regata</option>
+                            <option value="Luis">Luis</option>
+                            <option value="Nicolas">Nicolas</option>
+                            <option value="Rauta">Rauta</option>
+                            <option value="Silva">Silva</option>
+                            <option value="Sophie">Sophie</option>
+                            <option value="Thiago">Thiago</option>
+                            <option value="Brito">Brito</option>
+                            <option value="ulopesu">ulopesu</option>
+                            <option value="Vinicius">Vinicius</option>
+                            <option value="Bonella">Bonella</option>
+                        </select>
+                        <small id="usuarioHelp" class="form-text text-muted">Selecione um dos usuários para dar Turings.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="saTuringsValueProfessor">Valor</label>
+                        <input type="number" value=2 min=0 max=9 class="form-control" id="saTuringsValueProfessor" aria-describedby="emailHelp">
+                        <small id="numeroHelp" class="form-text text-muted">O valor sera submetido como Valor * Expoente</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectExpoentProfessor">Expoente 10^</label>
+                        <select id="selectExpoentProfessor">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                        </select>
+                        <small id="expoentHelp" class="form-text text-muted">2*10^18 equivale a 2 Turings e é o maior valor aceito.</small>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button id="submitIssueForm" type="button" class="btn btn-dark" style="float:center">Enviar</button>
+                    </div>
+
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="finishVoteButton" type="button" class="btn btn-danger">Fechar Votação</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importing Ethers.js script -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
