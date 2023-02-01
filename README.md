@@ -1,6 +1,7 @@
 # Turing-DApp
 An Ethereum Decentralized Application for a fictional coin called Turing
 
+![](img/home.PNG)
 
 # DApp
 The [smart contract](Turing.sol) implements three functions:
